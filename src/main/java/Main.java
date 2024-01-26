@@ -4,13 +4,11 @@ public class Main {
     static boolean[] isPaid = new boolean[100];
     static double[] interestRates = new double[100];
     static int loansCount = 0;
-    static String[] contactNumbers = new String[100];
 
-    public static void addLoan(String borrower, int amount, double interestRate, String contactNumber) {
+    public static void addLoan(String borrower, int amount, double interestRate) {
         borrowers[loansCount] = borrower;
         amounts[loansCount] = amount;
         interestRates[loansCount] = interestRate;
-        contactNumbers[loansCount] = contactNumber;
         loansCount++;
     }
 
@@ -48,6 +46,5 @@ public class Main {
         setAsPaid("Ben Chee");
         listLoans();
         System.out.println("profit: " + calculateProfitEarned());
-        Loan newLoan = new Loan()
     }
 }
